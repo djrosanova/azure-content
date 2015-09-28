@@ -10,10 +10,10 @@
 <tags 
 	ms.service="mobile-services" 
 	ms.workload="mobile" 
-	ms.tgt_pltfrm="" 
+	ms.tgt_pltfrm="na" 
 	ms.devlang="multiple" 
 	ms.topic="article" 
-	ms.date="11/21/2014" 
+	ms.date="04/24/2015" 
 	ms.author="mahender"/>
 
 # Build a Service Using MongoDB as a Data Store with the .NET Backend
@@ -115,8 +115,8 @@ The tutorial requires completion of the [Get started with Mobile Services] or [G
 
 
 <!-- URLs. -->
-[Get started with Mobile Services]: /en-us/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-get-started
-[Get Started with Data]: /en-us/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-get-started-data
+[Get started with Mobile Services]: mobile-services-dotnet-backend-windows-store-dotnet-get-started.md
+[Get Started with Data]: mobile-services-dotnet-backend-windows-store-dotnet-get-started-data.md
 [Azure Management Portal]: https://manage.windowsazure.com/
-[What is the Table Service]: /en-us/documentation/articles/storage-dotnet-how-to-use-tables/#what-is
-[MongoLab Add-on Page]: /en-us/gallery/store/mongolab/mongolab
+[What is the Table Service]: storage-dotnet-how-to-use-tables.md#what-is
+[MongoLab Add-on Page]: /gallery/store/mongolab/mongolab

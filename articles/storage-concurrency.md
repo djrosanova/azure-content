@@ -13,7 +13,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="dotnet" 
 	ms.topic="article" 
-	ms.date="10/08/2014" 
+	ms.date="02/26/2015" 
 	ms.author="tamram"/>
 
 # Managing Concurrency in Microsoft Azure Storage
@@ -82,7 +82,7 @@ The following C# snippet (using the Client Storage Library 4.2.0) shows a simple
 	        throw;
 	}  
 
-The Storage Service also includes support for additional conditional headers such as **If-Modified-Since**, **If-Unmodified-Since** and **If-None-Match** as well as combinations thereof. For more information see [Specifying Conditional Headers for Blob Service Operations](http://msdn.microsoft.com/library/dd179371.aspx) on MSDN.  
+The Storage Service also includes support for additional conditional headers such as **If-Modified-Since**, **If-Unmodified-Since** and **If-None-Match** as well as combinations thereof. For more information see [Specifying Conditional Headers for Blob Service Operations](http://msdn.microsoft.com/library/azure/dd179371.aspx) on MSDN.  
 
 The following table summarizes the container operations that accept conditional headers such as **If-Match** in the request and that return an ETag value in the response.  
 
@@ -279,7 +279,7 @@ For the complete sample application referenced in this blog:
 For more information on Azure Storage see:  
 
 - [Microsoft Azure Storage Home Page](http://azure.microsoft.com/services/storage/)
-- [Introduction to Azure Storage](http://azure.microsoft.com/documentation/articles/storage-introduction/)
-- Storage Getting Started for [Blob](http://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/), [Table](http://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-tables/) and [Queues](http://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-queues/)
-- Storage Architecture – [Windows Azure Storage : A Highly Available Cloud Storage Service with Strong Consistency](http://blogs.msdn.com/b/windowsazurestorage/archive/2011/11/20/windows-azure-storage-a-highly-available-cloud-storage-service-with-strong-consistency.aspx)
+- [Introduction to Azure Storage](storage-introduction.md)
+- Storage Getting Started for [Blob](storage-dotnet-how-to-use-blobs.md), [Table](storage-dotnet-how-to-use-tables.md) and [Queues](storage-dotnet-how-to-use-queues.md)
+- Storage Architecture – [Microsoft Azure Storage : A Highly Available Cloud Storage Service with Strong Consistency](http://blogs.msdn.com/b/windowsazurestorage/archive/2011/11/20/windows-azure-storage-a-highly-available-cloud-storage-service-with-strong-consistency.aspx)
 

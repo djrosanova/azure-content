@@ -1,5 +1,5 @@
 <properties 
-	pageTitle="How to use blob storage (Java) | Microsoft Azure" 
+	pageTitle="How to use Blob storage from Java | Microsoft Azure" 
 	description="Learn how to use the Azure blob service to upload, download, list, and delete blob content. Samples written in Java." 
 	services="storage" 
 	documentationCenter="java" 
@@ -13,10 +13,12 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="Java" 
 	ms.topic="article" 
-	ms.date="09/25/2014" 
+	ms.date="03/11/2015" 
 	ms.author="robmcm"/>
 
-# How to use Blob Storage from Java
+# How to use Blob storage from Java
+
+[AZURE.INCLUDE [storage-selector-blob-include](../includes/storage-selector-blob-include.md)]
 
 ## Overview
 
@@ -88,7 +90,7 @@ All blobs reside in a container. Use the **CloudBlobClient** object to get a ref
         e.printStackTrace();
     }
 
-### Optional: Configure a container for public access ### 
+### Optional: Configure a container for public access
 
 A container's permissions are configured for private access by default, but you can easily configure a container's permissions to allow public, read-only access for all users on the Internet:
 

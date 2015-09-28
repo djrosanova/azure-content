@@ -13,7 +13,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="na" 
 	ms.topic="article" 
-	ms.date="01/16/2015" 
+	ms.date="04/10/2015" 
 	ms.author="v-dobett"/>
 
 # Monitor, diagnose, and troubleshoot Microsoft Azure Storage 
@@ -58,7 +58,7 @@ For a hands-on guide to end-to-end troubleshooting in Azure Storage applications
 	+ [Capacity metrics show an unexpected increase in storage capacity usage]
 	+ [You are experiencing unexpected reboots of Virtual Machines that have a large number of attached VHDs]
 	+ [Your issue arises from using the storage emulator for development or test]
-	+ [You are encountering problems installing the Windows Azure SDK for .NET]
+	+ [You are encountering problems installing the Azure SDK for .NET]
 	+ [You have a different issue with a storage service]
 + [Appendices]
 	+ [Appendix 1: Using Fiddler to capture HTTP and HTTPS traffic]
@@ -134,7 +134,7 @@ Storage Metrics only stores capacity metrics for the blob service because blobs 
 
 > [AZURE.NOTE] You should monitor these values for an early warning that you are approaching the capacity limits of your storage account. In the Azure portal, on the **Monitor** page for your storage account, you can add alert rules to notify you if aggregate storage use exceeds or falls below thresholds that you specify.
 
-For help estimating the size of various storage objects such as blobs, see the blog post <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2010/07/09/understanding-windows-azure-storage-billing-bandwidth-transactions-and-capacity.aspx" target="_blank">Understanding Windows Azure Storage Billing – Bandwidth, Transactions, and Capacity</a>.
+For help estimating the size of various storage objects such as blobs, see the blog post <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2010/07/09/understanding-windows-azure-storage-billing-bandwidth-transactions-and-capacity.aspx" target="_blank">Understanding Azure Storage Billing – Bandwidth, Transactions, and Capacity</a>.
 
 ### <a name="monitoring-availability"></a>Monitoring availability
 
@@ -181,7 +181,7 @@ The following sections outline the steps you should follow to diagnose and troub
 
 ### <a name="service-health-issues"></a>Service health issues
 
-Service health issues are typically outside of your control. The Azure Portal provides information about any ongoing issues with Azure services including storage services. If you opted for Read-Access Geo-Redundant Storage when you created your storage account, then in the event of your data being unavailable in the primary location, your application could switch temporarily to the read-only copy in the secondary location. To do this, your application must be able to switch between using the primary and secondary storage locations, and be able to work in a reduced functionality mode with read-only data. The Azure Storage Client libraries allow you to define a retry policy that can read from secondary storage in case a read from primary storage fails. Your application also needs to be aware that the data in the secondary location is eventually consistent. For more information, see the blog post <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2013/12/04/introducing-read-access-geo-replicated-storage-ra-grs-for-windows-azure-storage.aspx" target="_blank">Windows Azure Storage Redundancy Options and Read Access Geo Redundant Storage</a>.
+Service health issues are typically outside of your control. The Azure Portal provides information about any ongoing issues with Azure services including storage services. If you opted for Read-Access Geo-Redundant Storage when you created your storage account, then in the event of your data being unavailable in the primary location, your application could switch temporarily to the read-only copy in the secondary location. To do this, your application must be able to switch between using the primary and secondary storage locations, and be able to work in a reduced functionality mode with read-only data. The Azure Storage Client libraries allow you to define a retry policy that can read from secondary storage in case a read from primary storage fails. Your application also needs to be aware that the data in the secondary location is eventually consistent. For more information, see the blog post <a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2013/12/04/introducing-read-access-geo-replicated-storage-ra-grs-for-windows-azure-storage.aspx" target="_blank">Azure Storage Redundancy Options and Read Access Geo Redundant Storage</a>.
 
 ### <a name="performance-issues"></a>Performance issues
 
@@ -345,7 +345,7 @@ Is your client application receiving an HTTP 4XX (such as 404) response from a s
 
 ----------
 
-[You are encountering problems installing the Windows Azure SDK for .NET]
+[You are encountering problems installing the Azure SDK for .NET]
 
 ----------
 
@@ -431,7 +431,7 @@ An increase in **PercentThrottlingError** often occurs at the same time as an in
 
 #### <a name="transient-increase-in-PercentThrottlingError"></a>Transient increase in PercentThrottlingError
 
-If you are seeing spikes in the value of **PercentThrottlingError** that coincide with periods of high activity for the application, you should implement an exponential (not linear) back off strategy for retries in your client: this will reduce the immediate load on the partition and help your application to smooth out spikes in traffic. For more information about how to implement retry policies using the Storage Client Library, see <a href="http://msdn.microsoft.com/library/microsoft.windowsazure.storage.retrypolicies.aspx" target="_blank">Microsoft.WindowsAzure.Storage.RetryPolicies Namespace</a> on MSDN.
+If you are seeing spikes in the value of **PercentThrottlingError** that coincide with periods of high activity for the application, you should implement an exponential (not linear) back off strategy for retries in your client: this will reduce the immediate load on the partition and help your application to smooth out spikes in traffic. For more information about how to implement retry policies using the Storage Client Library, see <a href="http://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.retrypolicies.aspx" target="_blank">Microsoft.WindowsAzure.Storage.RetryPolicies Namespace</a> on MSDN.
 
 > [AZURE.NOTE] You may also see spikes in the value of **PercentThrottlingError** that do not coincide with periods of high activity for the application: the most likely cause here is the storage service moving partitions to improve load balancing.
 
@@ -893,7 +893,7 @@ If you are using a JavaScript client and the storage service is returning HTTP 4
 
 These errors occur because the web browser implements the <a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" target="_blank">same-origin policy</a> security restriction that prevents a web page from calling an API in a different domain from the domain the page comes from. 
 
-To work around the JavaScript issue, you can configure Cross Origin Resource Sharing (CORS) for the storage service the client is accessing. For more information, see <a href="http://msdn.microsoft.com/library/azure/dn535601.aspx" target="_blank">Cross-Origin Resource Sharing (CORS) Support for the Windows Azure Storage Services</a> on MSDN.
+To work around the JavaScript issue, you can configure Cross Origin Resource Sharing (CORS) for the storage service the client is accessing. For more information, see <a href="http://msdn.microsoft.com/library/azure/dn535601.aspx" target="_blank">Cross-Origin Resource Sharing (CORS) Support for Azure Storage Services</a> on MSDN.
 
 The following code sample shows how to configure your blob service to allow JavaScript running in the Contoso domain to access a blob in your blob storage service:
 
@@ -1012,7 +1012,7 @@ You typically use the storage emulator during development and test to avoid the 
 
 #### <a name="feature-X-is-not-working"></a>Feature "X" is not working in the storage emulator
 
-The storage emulator does not support all of the features of the Azure storage services such as the file service. For more information, see <a href="http://msdn.microsoft.com/library/gg433135.aspx" target="_blank">Differences Between the Storage Emulator and Azure Storage Services</a> on MSDN.
+The storage emulator does not support all of the features of the Azure storage services such as the file service. For more information, see <a href="http://msdn.microsoft.com/library/azure/gg433135.aspx" target="_blank">Differences Between the Storage Emulator and Azure Storage Services</a> on MSDN.
 
 For those features that the storage emulator does not support, use the Azure storage service in the cloud.
 
@@ -1028,9 +1028,9 @@ This scenario typically occurs if you install and use the latest version of the 
 
 You are prompted for administrator credentials when you run the storage emulator. This only occurs when you are initializing the storage emulator for the first time. After you have initialized the storage emulator, you do not need administrative privileges to run it again. 
 
-For more information, see <a href="http://msdn.microsoft.com/library/gg433132.aspx" target="_blank">Initialize the Storage Emulator by Using the Command-Line Tool</a> on MSDN (you can also initialize the storage emulator in Visual Studio, which will also require administrative privileges).
+For more information, see <a href="http://msdn.microsoft.com/library/azure/gg433132.aspx" target="_blank">Initialize the Storage Emulator by Using the Command-Line Tool</a> on MSDN (you can also initialize the storage emulator in Visual Studio, which will also require administrative privileges).
 
-### <a name="you-are-encountering-problems-installing-the-Windows-Azure-SDK"></a>You are encountering problems installing the Windows Azure SDK for .NET
+### <a name="you-are-encountering-problems-installing-the-Windows-Azure-SDK"></a>You are encountering problems installing the Azure SDK for .NET
 
 When you try to install the SDK, it fails trying to install the storage emulator on your local machine. The installation log contains one of the following messages:
 
@@ -1142,7 +1142,7 @@ For more information about the Microsoft Message Analyzer Local Link Layer trace
 
 ### <a name="appendix-4"></a>Appendix 4: Using Excel to view metrics and log data
 
-Many tools enable you to download the Storage Metrics data from Azure table storage in a delimited format that makes it easy to load the data into Excel for viewing and analysis. Storage Logging data from Azure blob storage is already in a delimited format that you can load into Excel. However, you will need to add appropriate column headings based in the information at <a href="http://msdn.microsoft.com/library/hh343259.aspx" target="_blank">Storage Analytics Log Format</a> and <a href="http://msdn.microsoft.com/library/hh343264.aspx" target="_blank">Storage Analytics Metrics Table Schema</a>.
+Many tools enable you to download the Storage Metrics data from Azure table storage in a delimited format that makes it easy to load the data into Excel for viewing and analysis. Storage Logging data from Azure blob storage is already in a delimited format that you can load into Excel. However, you will need to add appropriate column headings based in the information at <a href="http://msdn.microsoft.com/library/azure/hh343259.aspx" target="_blank">Storage Analytics Log Format</a> and <a href="http://msdn.microsoft.com/library/azure/hh343264.aspx" target="_blank">Storage Analytics Metrics Table Schema</a>.
 
 To import your Storage Logging data into Excel after you download it from blob storage:
 
@@ -1159,7 +1159,7 @@ You can also use the Application Insights feature for Visual Studio Online as pa
 - Make sure your web service is available and responsive. Whether your app is a web site or a device app that uses a web service, it can test your URL every few minutes from locations around the world, and let you know if there’s a problem. 
 - Quickly diagnose any performance issues or exceptions in your web service. Find out if CPU or other resources are being stretched, get stack traces from exceptions, and easily search through log traces. If the app’s performance drops below acceptable limits, we can send you an email. You can monitor both .NET and Java web services.
 
-At the time of writing Application Insights is in preview. You can find more information at <a href="http://msdn.microsoft.com/library/dn481095.aspx" target="_blank">Application Insights for Visual Studio Online on MSDN</a>.
+At the time of writing Application Insights is in preview. You can find more information at <a href="http://msdn.microsoft.com/library/azure/dn481095.aspx" target="_blank">Application Insights for Visual Studio Online on MSDN</a>.
 
 
 <!--Anchors-->
@@ -1213,7 +1213,7 @@ At the time of writing Application Insights is in preview. You can find more inf
 [Feature "X" is not working in the storage emulator]: #feature-X-is-not-working
 [Error "The value for one of the HTTP headers is not in the correct format" when using the storage emulator]: #error-HTTP-header-not-correct-format
 [Running the storage emulator requires administrative privileges]: #storage-emulator-requires-administrative-privileges
-[You are encountering problems installing the Windows Azure SDK for .NET]: #you-are-encountering-problems-installing-the-Windows-Azure-SDK
+[You are encountering problems installing the Azure SDK for .NET]: #you-are-encountering-problems-installing-the-Windows-Azure-SDK
 [You have a different issue with a storage service]: #you-have-a-different-issue-with-a-storage-service
 
 [Appendices]: #appendices

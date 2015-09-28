@@ -10,7 +10,7 @@
 	authors="rmcmurray" 
 	solutions="" 
 	manager="wpickett" 
-	editor="mollybos" 
+	editor="jimbe" 
 	scriptId="" 
 	videoId=""/>
 
@@ -20,7 +20,7 @@
 	ms.tgt_pltfrm="na" 
 	ms.devlang="Java" 
 	ms.topic="article" 
-	ms.date="09/25/2014" 
+	ms.date="02/20/2015" 
 	ms.author="robmcm"/>
 
 # Using Azure Storage with a Jenkins Continuous Integration solution
@@ -65,7 +65,7 @@ You will need the following to use the Blob service with your Jenkins CI solutio
 
         While a typical Jenkins CI solution would be set up to run as a service, running the Jenkins war at the command line will be sufficient for this tutorial.
 
-- An Azure account. You can sign up for an Azure account at <http://www.windowsazure.com>.
+- An Azure account. You can sign up for an Azure account at <http://www.azure.com>.
 
 - An Azure storage account. If you don't already have a storage account, you can create one using the steps at [How to Create a Storage Account][].
 
